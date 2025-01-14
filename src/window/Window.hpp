@@ -4,7 +4,6 @@
 #include <GLFW/glfw3.h>
 #include <string>
 #include <spdlog/spdlog.h>
-#include "../events/EventManager.hpp"
 
 constexpr int DEFAULT_WIDTH = 800;
 constexpr int DEFAULT_HEIGHT = 600;
@@ -30,7 +29,7 @@ public:
         glfwSwapBuffers(mWindow);
         return *this;
     }
-    inline const Window &setContextCurrent() const
+    inline const Window &setContextCurrent()
     {
         glfwMakeContextCurrent(mWindow);
         return *this;
@@ -40,33 +39,32 @@ public:
         glfwPollEvents();
         return *this;
     }
-    inline const Window &setResizeCallback(
-        GLFWframebuffersizefun callback) const
+    inline const Window &setResizeCallback(GLFWframebuffersizefun callback)
     {
         glfwSetFramebufferSizeCallback(mWindow, callback);
         return *this;
     }
-    inline const Window &setKeyCallback(GLFWkeyfun callback) const
+    inline const Window &setKeyCallback(GLFWkeyfun callback)
     {
         glfwSetKeyCallback(mWindow, callback);
         return *this;
     }
-    inline const Window &setCursorCallback(GLFWcursorposfun callback) const
+    inline const Window &setCursorCallback(GLFWcursorposfun callback)
     {
         glfwSetCursorPosCallback(mWindow, callback);
         return *this;
     }
-    inline const Window &setTitle(const std::string &title) const
+    inline const Window &setTitle(const std::string &title)
     {
         glfwSetWindowTitle(mWindow, title.c_str());
         return *this;
     }
-    inline const Window &setSize(int width, int height) const
+    inline const Window &setSize(int width, int height)
     {
         glfwSetWindowSize(mWindow, width, height);
         return *this;
     };
-    inline const Window &setVSync(bool on) const
+    inline const Window &setVSync(bool on)
     {
         glfwSwapInterval(on);
         return *this;
@@ -77,12 +75,19 @@ public:
         glfwGetWindowSize(mWindow, &size.width, &size.height);
         return size;
     }
+    inline const Window &setMouseDisabled(bool on)
+    {
+        if (on)
+            glfwSetInputMode(mWindow, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+        else
+            glfwSetInputMode(mWindow, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+        return *this;
+    }
 
     inline bool shoudClose() const { return glfwWindowShouldClose(mWindow); }
     inline GLFWwindow *getWindowPtr() const { return mWindow; };
 
     void setupInputEvents();
-    void setupInputEvents(EventManager &eventManager);
 
     // public members
     // ...

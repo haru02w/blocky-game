@@ -19,11 +19,11 @@ public:
 
     static constexpr float DEFAULT_YAW = -90.0f;
     static constexpr float DEFAULT_PITCH = 0.0f;
-    static constexpr float DEFAULT_SPEED = 0.1f;
-    static constexpr float DEFAULT_SENSITIVITY = 0.1f;
-    static constexpr float DEFAULT_FOV = 45.0f;
+    static constexpr float DEFAULT_SPEED = 1.0f;
+    static constexpr float DEFAULT_SENSITIVITY = 62 / 1000.0f;
+    static constexpr float DEFAULT_FOV = 70.0f;
     static constexpr float DEFAULT_NEARPLANE = 0.1f;
-    static constexpr float DEFAULT_FARPLANE = 100.0f;
+    static constexpr float DEFAULT_FARPLANE = 10000.0f;
 
     enum Direction {
         FORWARD,
@@ -32,6 +32,7 @@ public:
         RIGHT,
         UP,
         DOWN,
+        SIZE, // always in the end!
     };
 
 private:
@@ -43,7 +44,7 @@ private:
     //
     // camera attrs
     glm::vec3 mPosition;
-    std::bitset<6> mDirections;
+    std::bitset<Direction::SIZE> mDirections;
     // base vecs
     glm::vec3 mFront;
     glm::vec3 mUp;

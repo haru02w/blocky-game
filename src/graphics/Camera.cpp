@@ -3,6 +3,8 @@
 #include "../events/KeyEvent.hpp"
 #include "../events/MouseEvent.hpp"
 #include "glm/fwd.hpp"
+#include "glm/geometric.hpp"
+#include "glm/trigonometric.hpp"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -62,7 +64,6 @@ void Camera::setupKeyboardInput()
 {
     globals.eventManager.subscribe<KeyEvent>(
         "KEY_W", [=, this](KeyEvent &&keyEvent) {
-            static glm::vec3 direction;
             if (keyEvent.action == KeyEvent::PRESSED)
                 mDirections[FORWARD] = true;
             else if (keyEvent.action == KeyEvent::RELEASED)
@@ -111,9 +112,10 @@ void Camera::setupKeyboardInput()
 }
 void Camera::setupMouseInput()
 {
-    static bool firstMouse = true;
     globals.eventManager.subscribe<MouseEvent>(
         "MOUSE_MOVEMENT", [=, this](MouseEvent &&mouseEvent) {
+            bool firstMouse = globals.state.paused;
+
             [[unlikely]] if (firstMouse) {
                 mLastMousePos.x = mouseEvent.posX;
                 mLastMousePos.y = mouseEvent.posY;
@@ -148,10 +150,16 @@ void Camera::setupMouseInput()
 
 void Camera::update()
 {
-    if (mDirections[FORWARD])
-        mPosition += mFront * mMovementSpeed;
-    if (mDirections[BACKWARD])
-        mPosition -= mFront * mMovementSpeed;
+    if (mDirections[FORWARD]) {
+        glm::vec3 worldFront
+            = glm::normalize(glm::vec3(mFront.x, 0.0f, mFront.z));
+        mPosition += worldFront * mMovementSpeed;
+    }
+    if (mDirections[BACKWARD]) {
+        glm::vec3 worldFront
+            = glm::normalize(glm::vec3(mFront.x, 0.0f, mFront.z));
+        mPosition -= worldFront * mMovementSpeed;
+    }
 
     if (mDirections[LEFT])
         mPosition -= mRight * mMovementSpeed;
@@ -159,7 +167,7 @@ void Camera::update()
         mPosition += mRight * mMovementSpeed;
 
     if (mDirections[UP])
-        mPosition += mUp * mMovementSpeed;
+        mPosition += mWorldUp * mMovementSpeed;
     if (mDirections[DOWN])
-        mPosition -= mUp * mMovementSpeed;
+        mPosition -= mWorldUp * mMovementSpeed;
 }

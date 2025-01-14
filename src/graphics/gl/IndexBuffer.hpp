@@ -1,10 +1,15 @@
 #pragma once
 #include <glad/glad.h>
+#include <utility>
 
 class IndexBuffer {
 public:
     // ctor
     inline IndexBuffer() { glGenBuffers(1, &mId); }
+    inline IndexBuffer(IndexBuffer &&other)
+        : mId(std::exchange(other.mId, 0))
+    {
+    }
     // dtor
     inline ~IndexBuffer() { glDeleteBuffers(1, &mId); }
 

@@ -1,13 +1,19 @@
 #include "Game.hpp"
 #include "TickTime.hpp"
 #include "Globals.hpp"
+#include "events/KeyEvent.hpp"
 
 Game::Game(const std::string &title)
     : mWindow(Window(title))
     , mTime()
     , mCamera()
-    , mRenderer(mCamera)
+    , mRenderer()
 {
+    globals.eventManager.subscribe<KeyEvent>(
+        "KEY_ESCAPE", [this](KeyEvent &&keyEvent) {
+            if (keyEvent.action == KeyEvent::PRESSED)
+                this->togglePause();
+        });
 }
 
 Game::~Game() { }
@@ -26,7 +32,13 @@ void Game::update()
 bool Game::isRunning() const { return !mWindow.shoudClose(); }
 void Game::render() const
 {
-    auto [scrWidth, scrHeight] = mWindow.getSize();
-    mRenderer.draw(scrWidth, scrHeight);
+    mRenderer.chunkRenderer.draw(mWindow, mCamera);
     mWindow.swapBuffers();
+}
+void Game::togglePause()
+{
+    static bool paused = false;
+    paused = !paused;
+    mWindow.setMouseDisabled(!paused);
+    globals.state.paused = paused;
 }

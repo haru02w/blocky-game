@@ -1,7 +1,6 @@
 #include <alloca.h>
 #include <filesystem>
 #include <glad/glad.h>
-#include <iostream>
 #include <spdlog/spdlog.h>
 #include "../../utils/utils.hpp"
 #include "ShaderProgram.hpp"

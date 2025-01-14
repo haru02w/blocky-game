@@ -1,8 +1,9 @@
 #pragma once
+#include "window/Window.hpp"
+#include "State.hpp"
 #include "TickTime.hpp"
 #include "graphics/Camera.hpp"
-#include "window/Window.hpp"
-#include "graphics/SimpleRenderer.hpp"
+#include "graphics/renderer/MasterRenderer.hpp"
 
 class Game {
 public:
@@ -17,10 +18,12 @@ public:
     TickTime &getTickTime();
 
 private:
+    void togglePause();
     // TODO: chainning setting functions
     Window mWindow;
     TickTime mTime;
     Camera mCamera;
+    State mState;
     // TODO: chainning setting functions
-    SimpleRenderer mRenderer;
+    MasterRenderer mRenderer;
 };

@@ -17,7 +17,6 @@ public:
 
     EventManager() = default;
     ~EventManager() = default;
-    EventManager &get();
 
     // Add events to be executed every time they happens
     template <EventTypename T>

@@ -1,3 +1,5 @@
 #include "Globals.hpp"
-#include "events/EventManager.hpp"
-Globals globals = { EventManager() };
+
+fs::path SHADER_PATH = "res/shaders";
+fs::path TEX_PATH = "res/texture";
+Globals globals = {};

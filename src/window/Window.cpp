@@ -1,5 +1,6 @@
 #include "Window.hpp"
 #include <GLFW/glfw3.h>
+#include <cstdlib>
 #include "../Globals.hpp"
 #include "../events/KeyEvent.hpp"
 #include "../events/MouseEvent.hpp"
@@ -160,6 +161,7 @@ Window::Window(const std::string &title, int width, int height)
 
     // bind OpenGL context
     glfwMakeContextCurrent(mWindow);
+    glfwSwapInterval(0);
 
     // glad: load all OpenGL function pointers
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
@@ -172,10 +174,12 @@ Window::Window(const std::string &title, int width, int height)
     }
 
     glViewport(0, 0, width, height);
+
     glfwSetFramebufferSizeCallback(
         mWindow, [](GLFWwindow *window, int width, int height) {
             glViewport(0, 0, width, height);
         });
+
     setupInputEvents();
 }
 
@@ -190,12 +194,16 @@ void Window::setupInputEvents()
     // Keyboard Input
     glfwSetKeyCallback(mWindow,
         [](GLFWwindow *window, int key, int scancode, int action, int mods) {
-            globals.eventManager.dispatch(
-                keyNames.at(key), KeyEvent(action, mods));
+            try {
+                globals.eventManager.dispatch(
+                    keyNames.at(key), KeyEvent(action, mods));
+            } catch (const std::out_of_range &error) {
+                spdlog::error(
+                    "Unknown Key: {}, action: {}, mods: {}", key, action, mods);
+            }
         });
 
-    // disable mouse when over the window
-    glfwSetInputMode(mWindow, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    setMouseDisabled(true);
     // Mouse Movement
     glfwSetCursorPosCallback(
         mWindow, [](GLFWwindow *window, double xpos, double ypos) {

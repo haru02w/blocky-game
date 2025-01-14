@@ -16,6 +16,31 @@
 },
 {
   "directory": "/home/haru02w/Projects/blocky-game",
+  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/window/Window.cpp.o", "src/window/Window.cpp"],
+  "file": "src/window/Window.cpp"
+},
+{
+  "directory": "/home/haru02w/Projects/blocky-game",
+  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/graphics/Camera.cpp.o", "src/graphics/Camera.cpp"],
+  "file": "src/graphics/Camera.cpp"
+},
+{
+  "directory": "/home/haru02w/Projects/blocky-game",
+  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/graphics/renderer/SimpleRenderer.cpp.o", "src/graphics/renderer/SimpleRenderer.cpp"],
+  "file": "src/graphics/renderer/SimpleRenderer.cpp"
+},
+{
+  "directory": "/home/haru02w/Projects/blocky-game",
+  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/graphics/renderer/MasterRenderer.cpp.o", "src/graphics/renderer/MasterRenderer.cpp"],
+  "file": "src/graphics/renderer/MasterRenderer.cpp"
+},
+{
+  "directory": "/home/haru02w/Projects/blocky-game",
+  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/graphics/renderer/ChunkRenderer.cpp.o", "src/graphics/renderer/ChunkRenderer.cpp"],
+  "file": "src/graphics/renderer/ChunkRenderer.cpp"
+},
+{
+  "directory": "/home/haru02w/Projects/blocky-game",
   "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/graphics/gl/Texture.cpp.o", "src/graphics/gl/Texture.cpp"],
   "file": "src/graphics/gl/Texture.cpp"
 },
@@ -26,28 +51,23 @@
 },
 {
   "directory": "/home/haru02w/Projects/blocky-game",
-  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/graphics/SimpleRenderer.cpp.o", "src/graphics/SimpleRenderer.cpp"],
-  "file": "src/graphics/SimpleRenderer.cpp"
+  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/graphics/ChunkMesh.cpp.o", "src/graphics/ChunkMesh.cpp"],
+  "file": "src/graphics/ChunkMesh.cpp"
 },
 {
   "directory": "/home/haru02w/Projects/blocky-game",
-  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/graphics/Camera.cpp.o", "src/graphics/Camera.cpp"],
-  "file": "src/graphics/Camera.cpp"
-},
-{
-  "directory": "/home/haru02w/Projects/blocky-game",
-  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/window/Window.cpp.o", "src/window/Window.cpp"],
-  "file": "src/window/Window.cpp"
-},
-{
-  "directory": "/home/haru02w/Projects/blocky-game",
-  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/TickTime.cpp.o", "src/TickTime.cpp"],
-  "file": "src/TickTime.cpp"
+  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/world/Chunk.cpp.o", "src/world/Chunk.cpp"],
+  "file": "src/world/Chunk.cpp"
 },
 {
   "directory": "/home/haru02w/Projects/blocky-game",
   "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/Globals.cpp.o", "src/Globals.cpp"],
   "file": "src/Globals.cpp"
+},
+{
+  "directory": "/home/haru02w/Projects/blocky-game",
+  "arguments": ["/nix/store/4apajimszc47rxwcpvc3g3rj2icinl71-gcc-wrapper-13.3.0/bin/gcc", "-c", "-m64", "-g", "-O2", "-std=c++23", "-Imodules/glad/include", "-Imodules/stb/include", "-Iinclude", "-I", "/home/haru02w/.xmake/packages/x/xtrans/1.4.0/269ba1f23faf46f3aafe004620bb0298/include", "-I", "/home/haru02w/.xmake/packages/l/libxau/1.0.11/218e721987304f53be7bf99aac25afa3/include", "-I", "/home/haru02w/.xmake/packages/l/libxdmcp/1.1.4/7faec34fb11446bea116a0e697e9a117/include", "-I", "/home/haru02w/.xmake/packages/x/xorgproto/2023.2/3a1682704c034fbf87583b32455dde94/include", "-I", "/home/haru02w/.xmake/packages/s/spdlog/v1.15.0/e2403252b26f4ef1b35d161469397773/include", "-I", "/home/haru02w/.xmake/packages/g/glm/1.0.1/5a7d2cda4da74028a7a8f76d96aceff0/include", "-o", "build/.objs/blocky-game/linux/x86_64/debug/src/TickTime.cpp.o", "src/TickTime.cpp"],
+  "file": "src/TickTime.cpp"
 },
 {
   "directory": "/home/haru02w/Projects/blocky-game",

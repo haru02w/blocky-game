@@ -1,10 +1,16 @@
 #pragma once
 #include <glad/glad.h>
+#include <utility>
+#include <utility>
 
 class VertexBuffer {
 public:
     // ctor
     inline VertexBuffer() { glGenBuffers(1, &mId); }
+    inline VertexBuffer(VertexBuffer &&other)
+        : mId(std::exchange(other.mId, 0))
+    {
+    }
     // dtor
     inline ~VertexBuffer() { glDeleteBuffers(1, &mId); }
     // Push data to the VertexBuffer

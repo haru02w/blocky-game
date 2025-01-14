@@ -1,8 +1,8 @@
+#include "Game.hpp"
 #include <cstdlib>
 #include <string>
+#include <spdlog/spdlog.h>
 #include "TickTime.hpp"
-#include "Game.hpp"
-#include "spdlog/spdlog.h"
 #include "utils/utils.hpp"
 
 int main(int argc, char *argv[])
@@ -13,16 +13,22 @@ int main(int argc, char *argv[])
     const std::string &title = utils::getProgramName(argc, argv);
     auto game = Game(title);
 
-    int i = 0;
-    while (game.isRunning()) {
-        TickTime &time = game.getTickTime().update();
+    TickTime &time = game.getTickTime().update();
+    double lastSecond = time.now();
+    for (int i = 0; game.isRunning(); i++) {
+        time.update();
 
         // Run update at fixed timestamps
         if (time.shoudUpdateGame())
             game.update();
-        
 
         game.render();
+        double now = time.now();
+        if (now - lastSecond >= 1) {
+            spdlog::info("FPS: {}", i);
+            i = 0;
+            lastSecond = now;
+        }
     }
 
     return EXIT_SUCCESS;
